@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# set -x
+
 # Set path of script
 PLUGIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# PLUGIN_DIR="/home/xavier.mandeng/.tmux/plugins/catppuccin"
 
 # import
 # shellcheck source=./builder/module_builder.sh
@@ -95,8 +98,8 @@ main() {
     get_interpolated_tmux_option "@catppuccin_pane_border_style" "fg=${thm_gray}"
   )
   pane_active_border_style=$(
-    get_interpolated_tmux_option "@catppuccin_pane_active_border_style" \
-      "#{?pane_in_mode,fg=${thm_yellow},#{?pane_synchronized,fg=${thm_magenta},fg=${thm_orange}}}"
+      get_interpolated_tmux_option "@catppuccin_pane_active_border_style" \
+        "#{?pane_in_mode,fg=${thm_yellow},#{?pane_synchronized,fg=${thm_magenta}},fg=${thm_orange}}"
   )
   pane_left_separator=$(get_tmux_option "@catppuccin_pane_left_separator" "█")
   pane_middle_separator=$(get_tmux_option "@catppuccin_pane_middle_separator" "█")
