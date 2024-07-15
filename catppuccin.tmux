@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-set -x
-
 # Set path of script
 PLUGIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# PLUGIN_DIR="/home/xavier.mandeng/.tmux/plugins/catppuccin"
 
 # import
 # shellcheck source=./builder/module_builder.sh
